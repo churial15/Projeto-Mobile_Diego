@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conecte-se</title>
+<style>
+
+/* body */
+body {
+/* fundo da página */
+  background-image: url('/assets/imagens/trab_mobile_5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* login-box */
+.login-box {
+  background: #525151;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.login-box h2 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.login-box input {
+  width: 91%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #043f7a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #022554;
+}
+
+.login-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fffcfc;
+}
+
+.login-box a {
+  color: #043f7a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.obrigatorio-texto {
+  color: #ccc;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 10px;
+  position: relative;
+  top: -33px;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* footer */
+.footer-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  background: #022554;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+  font-size: 17px;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .footer-box {
+    width: 90%;
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- login box -->
+<div class="login-box">
+  <p class="obrigatorio-texto"><span style="color: red;">*</span>campo obrigatório</p>
+  <h2>LOGAR</h2>
+  <form action="/login" method="POST">
+    <label for="email"><span style="color: red;">*</span>Email</label>
+    <input type="text" name="username" placeholder="Usuário" required>
+
+    <label for="senha"><span style="color: red;">*</span>Senha</label>
+    <input type="password" name="password" placeholder="Insira a senha" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+  <p>Não tem conta? <a href="#">Registrar</a></p>
+</div>
+
+<!-- footer -->
+<div class="footer-box">
+  <p>Veja a história por trás da banda virtual Goorilaz, seus criadores e sobre cada integrante, além de poder ouvir os maiores hits da banda.</p>
+</div>
+
+</body>
+</html>
